@@ -1,0 +1,19 @@
+---
+- name: "Run Django Test Application"
+  hosts: "app"
+  tasks:
+    - name: "Clone App from Git"
+      git:
+        repo: "https://github.com/mdn/django-locallibrary-tutorial.git"
+        dest: "~/repos/django/"
+        clone: yes
+        update: yes
+
+    - name: "Run App"
+      docker_container:
+        name: django-app
+        image: timurbabs/django:latest
+        state: started
+        ports:
+          - "8000:8000"
+...
