@@ -1,0 +1,5 @@
+[web]
+bubuntu3 ansible_host=192.168.56.203
+
+[app]
+bubuntu4 ansible_host=192.168.56.204
