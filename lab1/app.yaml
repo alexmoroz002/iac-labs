@@ -1,4 +1,6 @@
 ---
+- import_playbook: docker.yaml
+
 - name: "Run Django Test Application"
   hosts: "app"
   tasks:

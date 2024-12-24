@@ -39,4 +39,8 @@
         name: "{{ docker_user }}"
         groups: docker
         append: yes
+    
+    - name: "Reset ssh connection"
+      meta:
+        reset_connection
 ...

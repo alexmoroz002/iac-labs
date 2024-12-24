@@ -1,6 +1,14 @@
 ---
+- name: "Install Docker"
+  hosts: "all"
+  become: true
+  
+  roles:
+    - docker
+
 - name: "Run Django Test Application"
   hosts: "app"
+  become: true
   tasks:
     - name: "Clone App from Git"
       git:
