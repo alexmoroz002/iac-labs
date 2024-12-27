@@ -1,0 +1,16 @@
+---
+- name: Setup Master
+  hosts: master
+  become: true
+  roles:
+      - role: postgres
+  vars:
+      postgresql_role: master
+
+- name: Setup Replica
+  hosts: replica
+  become: true
+  roles:
+      - role: postgres
+  vars:
+      postgresql_role: replica

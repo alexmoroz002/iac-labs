@@ -1,0 +1,4 @@
+roles:
+  - src: git+git@gitlab.com:ansible-roles-iac/postgres.git
+    version: main
+    name: ansible-role-postgresql
